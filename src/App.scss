@@ -1,0 +1,74 @@
+@import './styles/global.scss';
+
+.container {
+  width: 100vw;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    margin-top: 75px;
+  }
+
+  @include desktop {
+    margin-top: 100px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    resize: none;
+    width: 80vw;
+    height: 40vw;
+    margin-bottom: 10px;
+    font-family: 'Lato';
+  }
+
+  &__button {
+    width: 25%;
+    margin-left: 75%;
+    background-color: #3cb4b4;
+    border: none;
+    border-radius: 2px;
+    height: 25px;
+    font-family: 'Raleway';
+    font-weight: 700;
+  }
+}
+
+.cards {
+  font-family: 'Lato';
+
+  &__title {
+    margin: 10px;
+  }
+
+  &__card {
+    width: 80vw;
+    background-color: #D3D3D3;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 2px;
+
+    &-prompt {
+      margin: 5px;
+
+      &-title {
+        font-weight: 700;
+      }
+    }
+
+    &-response {
+      margin: 5px;
+
+      &-title {
+        font-weight: 700;
+      }
+    }
+  }
+}

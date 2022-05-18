@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OpenAI from 'openai-api';
-import './App.css';
+import Header from './components/Header/Header';
+import './App.scss';
 
 function App() {
 
@@ -55,22 +56,28 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
+      <div className="container">
       <section>
-        <form onSubmit={handleSubmit}>
-          <textarea name="prompt" placeholder='Enter a prompt here...' onChange={e => setInput(e.target.value)}></textarea>
-          <button type="submit">Submit</button>
+        <form className="form" onSubmit={handleSubmit}>
+          <textarea className="form__input" name="prompt" placeholder='Enter a prompt here...' onChange={e => setInput(e.target.value)}></textarea>
+          <button className="form__button" type="submit">Submit</button>
         </form>
       </section>
-      <section>
+      <section className="cards">
+        <h3 className="cards__title">Responses</h3>
         {cards.map((item) => {
           return (
-            <div key={item.id}>
-              <p>{item.prompt}</p>
-              <p>{item.response}</p>
+            <div className="cards__card" key={item.id}>
+              <p className="cards__card-prompt-title">Prompt:</p>
+              <p className="cards__card-prompt">{item.prompt}</p>
+              <p className="cards__card-response-title">Response:</p>
+              <p className="cards__card-response">{item.response}</p>
             </div>
           )})
         }
       </section>
+      </div>
     </div>
   );
 }
