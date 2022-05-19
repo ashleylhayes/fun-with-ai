@@ -1,0 +1,23 @@
+@import '../../styles/global.scss';
+
+.intro {
+    width: 80vw;
+
+    @include tablet-large {
+        width: 70vw;
+    }
+
+    @include desktop {
+        width: 50vw;
+    }
+
+    &__greeting {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}

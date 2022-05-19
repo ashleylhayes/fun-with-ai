@@ -3,6 +3,7 @@
 .container {
   width: 100vw;
   margin-top: 60px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,12 +22,32 @@
   display: flex;
   flex-direction: column;
 
+  &__label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
   &__input {
     resize: none;
     width: 80vw;
     height: 40vw;
+    padding: 10px;
     margin-bottom: 10px;
+    outline: none;
     font-family: 'Lato';
+
+    @include tablet-large {
+      width: 70vw;
+      height: 30vw;
+    }
+
+    @include desktop {
+      width: 50vw;
+      height: 20vw;
+      font-size: 15px;
+    }
   }
 
   &__button {
@@ -35,9 +56,14 @@
     background-color: #3cb4b4;
     border: none;
     border-radius: 2px;
-    height: 25px;
+    height: 30px;
     font-family: 'Raleway';
     font-weight: 700;
+
+    @include tablet-large {
+      width: 15%;
+      margin-left: 85%;
+    }
   }
 }
 
@@ -55,8 +81,17 @@
     padding: 15px;
     border-radius: 2px;
 
+    @include tablet-large {
+      width: 70vw;
+    }
+
+    @include desktop {
+      width: 50vw;
+    }
+
     &-prompt {
       margin: 5px;
+      margin-bottom: 10px;
 
       &-title {
         font-weight: 700;

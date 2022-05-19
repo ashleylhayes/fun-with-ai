@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OpenAI from 'openai-api';
 import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
 import './App.scss';
 
 function App() {
@@ -58,9 +59,11 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
+      <Intro />
       <section>
         <form className="form" onSubmit={handleSubmit}>
-          <textarea className="form__input" name="prompt" placeholder='Enter a prompt here...' onChange={e => setInput(e.target.value)}></textarea>
+          <label className="form__label">Enter Prompt</label>
+          <textarea className="form__input" name="prompt" placeholder='Type your prompt here...' onChange={e => setInput(e.target.value)}></textarea>
           <button className="form__button" type="submit">Submit</button>
         </form>
       </section>
