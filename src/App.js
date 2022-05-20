@@ -52,7 +52,7 @@ function App() {
       },
       ...cards]
     ));
-    
+
   }
 
   return (
@@ -64,6 +64,7 @@ function App() {
         <form className="form" onSubmit={handleSubmit}>
           <label className="form__label">Enter Prompt</label>
           <textarea className="form__input" name="prompt" placeholder='Type your prompt here...' onChange={e => setInput(e.target.value)}></textarea>
+          <button type="reset" className="form__reset">Reset</button>
           <button className="form__button" type="submit">Submit</button>
         </form>
       </section>
