@@ -59,28 +59,30 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-      <Intro />
-      <section>
-        <form className="form" onSubmit={handleSubmit}>
-          <label className="form__label">Enter Prompt</label>
-          <textarea className="form__input" name="prompt" placeholder='Type your prompt here...' onChange={e => setInput(e.target.value)}></textarea>
-          <button type="reset" className="form__reset">Reset</button>
-          <button className="form__button" type="submit">Submit</button>
-        </form>
-      </section>
-      <section className="cards">
-        <h3 className="cards__title">Responses</h3>
-        {cards.map((item) => {
-          return (
-            <div className="cards__card" key={item.id}>
-              <p className="cards__card-prompt-title">Prompt:</p>
-              <p className="cards__card-prompt">{item.prompt}</p>
-              <p className="cards__card-response-title">Response:</p>
-              <p className="cards__card-response">{item.response}</p>
+        <Intro />
+        <section>
+          <form className="form" onSubmit={handleSubmit}>
+            <label className="form__label">Enter Prompt</label>
+            <textarea className="form__input" name="prompt" placeholder='Type your prompt here...' onChange={e => setInput(e.target.value)}></textarea>
+            <div className="form__button-container">
+              <button type="reset" className="form__reset">Clear</button>
+              <button className="form__submit" type="submit">Submit</button>
             </div>
-          )})
-        }
-      </section>
+          </form>
+        </section>
+        <section className="cards">
+          <h3 className="cards__title">Responses</h3>
+          {cards.map((item) => {
+            return (
+              <div className="cards__card" key={item.id}>
+                <p className="cards__card-prompt-title">Prompt:</p>
+                <p className="cards__card-prompt">{item.prompt}</p>
+                <p className="cards__card-response-title">Response:</p>
+                <p className="cards__card-response">{item.response}</p>
+              </div>
+            )})
+          }
+        </section>
       </div>
     </div>
   );

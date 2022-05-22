@@ -25,7 +25,8 @@
   &__label {
     font-size: 18px;
     font-weight: 700;
-    margin-top: 30px;
+    font-family: 'Raleway';
+    margin-top: 25px;
     margin-bottom: 10px;
   }
 
@@ -50,35 +51,42 @@
     }
   }
 
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &__reset {
-     width: 25%;
-    margin-left: 75%;
+    width: 25%;
     background-color: #D3D3D3;
     border: none;
     border-radius: 2px;
-    height: 30px;
+    height: 35px;
     font-family: 'Raleway';
     font-weight: 700;
+    cursor: pointer;
+
+    @include tablet {
+      width: 20%;
+    }
 
     @include tablet-large {
       width: 15%;
-      margin-left: 85%;
     }
   }
 
-  &__button {
-    width: 25%;
-    margin-left: 75%;
+  &__submit {
+    @extend .form__reset;
     background-color: #3cb4b4;
-    border: none;
-    border-radius: 2px;
-    height: 30px;
-    font-family: 'Raleway';
-    font-weight: 700;
+    margin-left: 5px;
+
+    @include tablet {
+      width: 20%;
+    }
 
     @include tablet-large {
       width: 15%;
-      margin-left: 85%;
+      margin-left: 10px;
     }
   }
 }
@@ -111,6 +119,7 @@
 
       &-title {
         font-weight: 700;
+        font-family: 'Raleway';
       }
     }
 
@@ -119,6 +128,7 @@
 
       &-title {
         font-weight: 700;
+        font-family: 'Raleway';
       }
     }
   }
