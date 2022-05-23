@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Fun with AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Fun with AI: Brought to you by the OpenAI GPT-3 API!
 
-## Available Scripts
+A responsive web application used to send plain text prompts to the OpenAI API and display the prompts and responses in a list. Built with React, JavaScript, and SCSS.
 
-In the project directory, you can run:
+Visit the deployed app here: [ahayes-fun-with-ai.netlify.app](https://ahayes-fun-with-ai.netlify.app)
 
-### `npm start`
+## Project Screen Shots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Desktop:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src='public/ScreenShotDesktop.png' alt='Screen shot from desktop breakpoint of Fun with AI app' width='1200' />
 
-### `npm test`
+#### Tablet:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src='public/ScreenShotTablet.png' alt='Screen shot from tablet breakpoint of Fun with AI app' width='500' />
 
-### `npm run build`
+#### Mobile:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src='public/ScreenShotMobile.png' alt='Screen shot from mobile breakpoint of Fun with AI app' width='300' />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Reflection
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was built by me over 5 days as a technical challenge for the Shopify Frontend Developer Internship. Project goals included using technologies learned up until this point and familiarizing myself with ways to implement new features.
 
-### `npm run eject`
+I met the technical requirements for this project as follows:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Results come from OpenAI’s completions API.
+  - Each result includes the original prompt entered and the response from the API.
+  - Responses are stored in order of newest to oldest.
+  - The application is accessible and the HTML that is served client-side is semantic.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I chose to add the following extra features to improve the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  - Made the application fully responsive by adusting the design for mobile, tablet and laptop/desktop breakpoints.
+  - Utilized Local Storage to save data so that the application stores prompts and responses if the user leaves or reloads the page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I wanted to build a responsive web application using a mobile first approach that allowed users to send plain text prompts to the OpenAI API and display the prompts and responses in a list. I started this process by using the `create-react-app` boilerplate, then adding `openai-api` and `sass`.
 
-## Learn More
+At the end of the day, the technologies implemented in this project are React, OpenAI API, JavaScript, JSX, Flexbox and SCSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time into styling this as a responsive app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation and Setup Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-### Code Splitting
+Installation:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`npm install`  
 
-### Analyzing the Bundle Size
+To Start Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`npm start`  
 
-### Making a Progressive Web App
+To Visit App:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`http://localhost:3000/`
