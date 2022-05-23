@@ -7,7 +7,13 @@ import './App.scss';
 function App() {
 
   const [input, setInput] = useState("");
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState([
+    {
+      id: "1284hfncf84yhbkd8",
+      prompt: "Write a tagline for an ice cream shop.",
+      response: "We serve up smiles with every scoop!"
+    },
+  ]);
   
   const OPENAI_API_KEY = process.env.REACT_APP_OPENAI;
   const openai = new OpenAI(OPENAI_API_KEY);
@@ -25,7 +31,7 @@ function App() {
     const gptResponse = await openai.complete({
         engine: 'text-curie-001',
         prompt: input,
-        maxTokens: 100,
+        maxTokens: 200,
         temperature: 0.9,
         topP: 1,
         presencePenalty: 0,
